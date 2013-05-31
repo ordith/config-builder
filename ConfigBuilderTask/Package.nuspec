@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>ConfigBuilder</id>
+    <version>1.0.0</version>
+    <authors>Thealah</authors>
+    <owners>dtinteractive</owners>
+    <licenseUrl>http://github.com/dtinteractive/config-builder/LICENSE</licenseUrl>
+    <projectUrl>http://github.com/dtinteractive/config-builder/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>ConfigBuilder is a custom MSBuild task that can be used to build configs based on a template and parameters that you define.
+
+You can define parameters per environment, define a current working environment to use, and define templates that the configs are based on.
+
+ConfigBuilder is built to be simple- it is doing a simple token string replace. It does not require advanced knowledge of XSLT to create a template-based config.</description>
+    <releaseNotes>Version 1.0</releaseNotes>
+    <copyright>Copyright 2013</copyright>
+    <tags>MSBuild</tags>
+    <dependencies>
+		<dependency id="NuGetPowerTools" version="0.26" />
+    </dependencies>
+  </metadata>
+  <files>
+	<file src="ConfigBuilderTask\bin\Release\ConfigBuilderTask.dll" target="lib" /> 
+	<file src="ConfigBuilderTask\tools\install.ps1" target="tools\install.ps1" />
+	<file src="ConfigBuilderTask\tools\uninstall.ps1" target="tools\uninstall.ps1" />
+  </files>
+</package>

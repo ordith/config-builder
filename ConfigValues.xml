@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ConfigValues WorkingEnvironment="Dev" WorkingEnvironmentFolder="./">
+  <Tasks>
+	<CreateConfigTask NameFormat="App.config" InputFile="./Template.App.config" OutputFolderFormat="./Configuration/{0}/" />
+	<CreateConfigTask NameFormat="App2.config" InputFile="./Template2.App.config" OutputFolderFormat="./Configuration/{0}/"
+					  ExcludeProjects="FakeApplicationToBuild,DummyProjectName,DummyProjectName2" />
+  </Tasks>
+  <Parameters>
+    <ConfigParameter Name="ReplaceMe">
+      <Values>
+        <ConfigParameterValue Environment="Dev" Value="Replaced1" />
+		<ConfigParameterValue Environment="Stage" Value="Replaced2" />
+		<ConfigParameterValue Environment="Prod" Value="Replaced2" />
+      </Values>
+    </ConfigParameter>
+    <ConfigParameter Name="ReplaceMe2">
+      <Values>
+        <ConfigParameterValue Environment="Dev" Value="Replaced3" />
+        <ConfigParameterValue Environment="Stage" Value="Replaced4" />
+      </Values>
+    </ConfigParameter>
+  </Parameters>
+</ConfigValues>

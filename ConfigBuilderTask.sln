@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigBuilderTask", "ConfigBuilderTask\ConfigBuilderTask.csproj", "{507C58FC-B3F1-4767-9E56-5CC023AC8E61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FakeApplicationToBuild", "FakeApplicationToBuild\FakeApplicationToBuild.csproj", "{0E1584B0-1902-4861-AD88-68BB7A95EFD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigValueCreator", "ConfigValueCreator\ConfigValueCreator.csproj", "{0B660427-E29C-4203-A712-05CF3287B33F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3886DD7D-A24E-49DF-BBE8-39D5A09028DA}"
+	ProjectSection(SolutionItems) = preProject
+		ConfigValues.xml = ConfigValues.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{8485F7F4-9858-43DF-974A-A59E277FD1D8}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{507C58FC-B3F1-4767-9E56-5CC023AC8E61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{507C58FC-B3F1-4767-9E56-5CC023AC8E61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{507C58FC-B3F1-4767-9E56-5CC023AC8E61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{507C58FC-B3F1-4767-9E56-5CC023AC8E61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E1584B0-1902-4861-AD88-68BB7A95EFD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E1584B0-1902-4861-AD88-68BB7A95EFD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E1584B0-1902-4861-AD88-68BB7A95EFD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E1584B0-1902-4861-AD88-68BB7A95EFD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B660427-E29C-4203-A712-05CF3287B33F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B660427-E29C-4203-A712-05CF3287B33F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B660427-E29C-4203-A712-05CF3287B33F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B660427-E29C-4203-A712-05CF3287B33F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

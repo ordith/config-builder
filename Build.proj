@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <SolutionName>ConfigBuilderTask.sln</SolutionName>
+    <DropFolder>Drop</DropFolder>
+    <ArtifactFolder>Artifacts</ArtifactFolder>
+	<LibraryFolder>Libraries</LibraryFolder>
+	<MSBuildCommunityTasksPath>$(MSBuildProjectDirectory)\Libraries</MSBuildCommunityTasksPath>
+    <ConfigTaskSource>.\ConfigBuilderTask</ConfigTaskSource>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TEAMCITY_VERSION)' != '' " >
+    <BuildConfiguration>Release</BuildConfiguration>
+  </PropertyGroup>
+  <PropertyGroup  Condition=" '$(TEAMCITY_VERSION)' == '' " >
+    <BuildConfiguration>Debug</BuildConfiguration>
+  </PropertyGroup>
+
+	<Import Project="$(LibraryFolder)\MSBuild.Community.Tasks.Targets"/>
+
+  <Target Name="Build">
+    <CallTarget Targets="CleanBuild; CompileSolution; DeployAnalysisResources; CopyCodeToDrop"/>
+  </Target>
+
+  <!-- Don't clean if we are building in teamcity. We don't wont teamcity artifacts deleted-->
+  <Target Name="CleanBuild" Condition=" '$(TEAMCITY_VERSION)' == '' " >
+    <ItemGroup>
+      <CleanBuildFolders
+          Include="**\bin\**\*.*;
+				**\obj\**\*.*;
+				$(DropFolder)\**\*.*;
+				$(ArtifactFolder)\**\*.* "/>
+    </ItemGroup>
+    <Delete Files="@(CleanBuildFolders)"/>
+  </Target>
+
+  <Target Name="CompileSolution" >
+    <MSBuild Projects="$(SolutionName)" Properties="Configuration=$(BuildConfiguration);" />
+  </Target>
+
+  <Target Name="DeployAnalysisResources" DependsOnTargets="CompileSolution">
+    <CallTarget Targets="DeployRuntime"/>
+  </Target>
+
+  <Target Name="DeployRuntime">
+    <ItemGroup>
+      <RuntimeAssemblies Include="$(MSBuildProjectDirectory)\$(ConfigTaskSource)\bin\*.dll" />
+      <RuntimeAssemblies Include="$(MSBuildProjectDirectory)\$(ConfigTaskSource)\bin\*.pdb" />
+    </ItemGroup>
+    <Copy SourceFiles="@(RuntimeAssemblies)" DestinationFolder="$(DropFolder)\Runtime" />
+  </Target>
+
+  <!-- Begin Drop Folder manipulations -->
+  <Target Name="CopyCodeToDrop" >
+    <RoboCopy
+      SourceFolder="$(ConfigTaskSource)"
+      DestinationFolder="$(DropFolder)"
+      Mirror="true"
+      ExcludeFolders=".svn;obj;.settings;CodeTemplates;*_ReSharper*"
+      ExcludeFiles="*.resx;*.csproj;*.webinfo;*.log;*.cs;*.user;.project;"
+      NoJobHeader="true" />
+  </Target>
+</Project>
