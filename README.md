@@ -30,6 +30,6 @@ By default, the `Values` file is relative to your project directory - `../Config
 
 The [Example Folder](/Example/) has the `Values` file, `Template` file, and the output App.config files.
 
-*[Example Config Values](/Example/ConfigValues.xml)
-*[Example Template file](/Example/Template.App.config)
-*[Example Working Environment file](/Example/App.config)
+* [Example Config Values](/Example/ConfigValues.xml)
+* [Example Template file](/Example/Template.App.config)
+* [Example Working Environment file](/Example/App.config)
