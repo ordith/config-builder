@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ConfigValues WorkingEnvironment="Dev" WorkingEnvironmentFolder="./">
+  <Tasks>
+	<CreateConfigTask NameFormat="App.config" InputFile="./Template.App.config" OutputFolderFormat="./Configuration/{0}/" />
+  </Tasks>
+  <Parameters>
+    <ConfigParameter Name="EnvironmentName">
+      <Values>
+        <ConfigParameterValue Environment="Dev" Value="Development" />
+		<ConfigParameterValue Environment="Stage" Value="Stage" />
+		<ConfigParameterValue Environment="Prod" Value="Production" />
+      </Values>
+    </ConfigParameter>
+    <ConfigParameter Name="Title">
+      <Values>
+        <ConfigParameterValue Environment="Dev" Value="Example" />
+        <ConfigParameterValue Environment="Stage" Value="Example" />
+		<ConfigParameterValue Environment="Prod" Value="The Real Example" />
+      </Values>
+    </ConfigParameter>
+  </Parameters>
+</ConfigValues>
