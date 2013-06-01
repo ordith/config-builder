@@ -5,8 +5,8 @@
     <version>1.0.0</version>
     <authors>Thealah</authors>
     <owners>dtinteractive</owners>
-    <licenseUrl>http://github.com/dtinteractive/config-builder/LICENSE</licenseUrl>
-    <projectUrl>http://github.com/dtinteractive/config-builder/</projectUrl>
+    <licenseUrl>https://github.com/dtinteractive/config-builder/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/dtinteractive/config-builder/</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>ConfigBuilder is a custom MSBuild task that can be used to build configs based on a template and parameters that you define.
 
