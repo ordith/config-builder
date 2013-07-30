@@ -14,6 +14,8 @@ namespace ConfigBuilderTask.Schema
     {
         [XmlAttribute("Name")]
         public string Name { get; set; }
-        public ConfigParameterValue[] Values { get; set; }
+		[XmlAttribute("Default")]
+		public string DefaultValue { get; set; }
+		public ConfigParameterValue[] Values { get; set; }
     }
 }

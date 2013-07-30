@@ -19,11 +19,18 @@ namespace ConfigBuilderTask
 
 			foreach (var parameter in parameters)
 			{
+				if (!string.IsNullOrWhiteSpace(parameter.DefaultValue))
+				{
+					returnValue.AddDefault(parameter.Name, parameter.DefaultValue);
+				}
+
 				foreach (var value in parameter.Values)
 				{
 					returnValue.AddParameter(value, parameter.Name);
 				}
 			}
+
+			returnValue.FillDefaults();
 
 			return returnValue;
 		}

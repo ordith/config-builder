@@ -29,28 +29,25 @@ namespace ConfigValueCreator
                     new ConfigParameter {
                         Name = "ReplaceMe",
                         Values = new ConfigParameterValue[] {
-                            new ConfigParameterValue {
-                                Environment = "Dev",
-                                Value = "Replaced1"
-                            },
-                            new ConfigParameterValue {
-                                Environment = "Stage",
-                                Value = "Replaced2"
-                            },
-                        }
+									new ConfigParameterValue {
+										Environment = "Dev",
+										Value = "Replaced1"
+									}
+								},
+						DefaultValue = "DefaultReplaced"
                     },
                     new ConfigParameter {
                         Name = "ReplaceMe2",
                         Values = new ConfigParameterValue[] {
-                            new ConfigParameterValue {
-                                Environment = "Dev",
-                                Value = "Replaced3"
-                            },
-                            new ConfigParameterValue {
-                                Environment = "Stage",
-                                Value = "Replaced4"
-                            },
-                        }
+									new ConfigParameterValue {
+										Environment = "Dev",
+										Value = "Replaced3"
+									},
+									new ConfigParameterValue {
+										Environment = "Stage",
+										Value = "Replaced4"
+									},	
+								}
                     },
                 }
 			};

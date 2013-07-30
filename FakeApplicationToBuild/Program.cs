@@ -12,6 +12,10 @@ namespace FakeApplicationToBuild
 			Console.WriteLine("After building, 'ReplaceMeResult' should have a value.");
 			Console.WriteLine("ReplaceMeResult: {0}", exampleValue);
 
+			var exampleValue2 = ConfigurationManager.AppSettings["ReplaceMe2Result"];
+			Console.WriteLine("After building, 'ReplaceMe2Result' should have a value plus some extra text due to the template.");
+			Console.WriteLine("ReplaceMe2Result: {0}", exampleValue2);
+
 			Console.ReadLine();
 		}
 	}
