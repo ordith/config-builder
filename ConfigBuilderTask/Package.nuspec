@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>ConfigBuilder</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <authors>Thealah</authors>
     <owners>dtinteractive</owners>
     <licenseUrl>https://github.com/dtinteractive/config-builder/blob/master/LICENSE</licenseUrl>
@@ -13,7 +13,7 @@
 You can define parameters per environment, define a current working environment to use, and define templates that the configs are based on.
 
 ConfigBuilder is built to be simple- it is doing a simple token string replace. It does not require advanced knowledge of XSLT to create a template-based config.</description>
-    <releaseNotes>Version 1.0</releaseNotes>
+    <releaseNotes>Version 1.0.1</releaseNotes>
     <copyright>Copyright 2013</copyright>
     <tags>MSBuild</tags>
     <dependencies>
