@@ -7,11 +7,9 @@ ConfigBuilder is a custom MSBuild task that can be used to build configs based o
 
 You can define parameter values per environment, define a selected environment to use, and define templates that the configs are based on.
 
-ConfigBuilder is built to be simple- it replaces parameneters using a token. 
-
-In contrast to Microsoft's configuration templating: 
-* It does not require advanced knowledge of XSLT to create a template-based config. 
-* All of your parameter values are in one, readable, place.
+ConfigBuilder is built to be **simple**- in contrast to [Microsoft's configuration transformation](http://msdn.microsoft.com/en-us/library/dd465326.aspx): 
+* It does not require knowledge of XSLT to create a template-based config. 
+* All of your parameter values and environments are in one, readable, place.
 
 ## Getting Started
 
@@ -28,6 +26,7 @@ ConfigBuilder has a Nuget Package you can use to add it to your build.
 	Install-Package ConfigBuilder
 
 This will add ConfigBuilder as a build step to the project that you install the package to.
+When you build your project, it will generate the config files you define in the next step.
 
 ### Create ConfigValues.xml 
 
