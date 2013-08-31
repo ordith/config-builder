@@ -19,7 +19,7 @@ namespace ConfigBuilderTask
 
 			foreach (var parameter in parameters)
 			{
-				if (!string.IsNullOrWhiteSpace(parameter.DefaultValue))
+				if (parameter.DefaultValue != null)
 				{
 					returnValue.AddDefault(parameter.Name, parameter.DefaultValue);
 				}
