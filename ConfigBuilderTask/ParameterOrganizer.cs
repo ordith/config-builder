@@ -24,10 +24,13 @@ namespace ConfigBuilderTask
 					returnValue.AddDefault(parameter.Name, parameter.DefaultValue);
 				}
 
-				foreach (var value in parameter.Values)
-				{
-					returnValue.AddParameter(value, parameter.Name);
-				}
+			    if (parameter.Values != null)
+                {
+                    foreach (var value in parameter.Values)
+                    {
+                        returnValue.AddParameter(value, parameter.Name);
+                    }
+			    }
 			}
 
 			returnValue.FillDefaults();

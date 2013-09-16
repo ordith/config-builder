@@ -15,8 +15,8 @@
     </ConfigParameter>
     <ConfigParameter Name="ReplaceMe2" Default="">
       <Values>
-        <ConfigParameterValue Environment="Dev" Value="Replaced3" />
-        <ConfigParameterValue Environment="Stage" Value="Replaced4" />
+        <ConfigParameterValue Environment="Dev" Value="Replaced2" />
+        <ConfigParameterValue Environment="Prod" Value="Replaced2" />
       </Values>
     </ConfigParameter>
   </Parameters>
