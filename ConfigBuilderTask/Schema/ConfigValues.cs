@@ -12,9 +12,16 @@ namespace ConfigBuilderTask.Schema
 {
     public class ConfigValues
     {
-		[XmlAttribute("WorkingEnvironment")]
-        public string WorkingEnvironment { get; set; }
-		[XmlAttribute("WorkingEnvironmentFolder")]
+	    private string _workingEnvironment;
+
+	    [XmlAttribute("WorkingEnvironment")]
+        public string WorkingEnvironment
+	    {
+		    get { return _workingEnvironment; }
+		    set { _workingEnvironment = value.ToLowerInvariant(); }
+	    }
+
+	    [XmlAttribute("WorkingEnvironmentFolder")]
 	    public string WorkingEnvironmentFolder { get; set; }
         public CreateConfigTask[] Tasks { get; set; }
         public ConfigParameter[] Parameters { get; set; }
